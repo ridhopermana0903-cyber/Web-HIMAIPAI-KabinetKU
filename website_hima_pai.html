@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIMA PAI - Himpunan Mahasiswa Ilmu Pendidikan Agama Islam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-pattern {
+            background-color: #1ea5e8; /* Biru Logo */
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="images (16).jpg" alt="Logo HIMA PAI" class="w-10 h-10 rounded-full object-cover mr-3 border-2 border-yellow-400 bg-white shadow-sm">
+                    <span class="font-bold text-xl text-sky-700 tracking-tight">HIMA PAI</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#beranda" class="text-gray-600 hover:text-sky-600 font-medium transition">Beranda</a>
+                    <a href="#profil" class="text-gray-600 hover:text-sky-600 font-medium transition">Profil</a>
+                    <a href="#proker" class="text-gray-600 hover:text-sky-600 font-medium transition">Program Kerja</a>
+                    <a href="#administrasi" class="text-gray-600 hover:text-sky-600 font-medium transition">Pusat Layanan</a>
+                    <button onclick="toggleLoginModal()" class="bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-700 font-bold shadow-md transition flex items-center">
+                        <i class="fas fa-user-circle mr-2"></i>Login Warga
+                    </button>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-sky-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="beranda" class="hero-pattern pt-28 pb-20 text-white min-h-[80vh] flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <span class="bg-yellow-400 text-black text-sm font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-sm">
+                    Kabinet Inovasi
+                </span>
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 drop-shadow-md">
+                    Digitalisasi Himpunan, <br/> Bergerak Penuh Inovasi.
+                </h1>
+                <p class="text-lg md:text-xl text-white mb-8 max-w-lg mx-auto md:mx-0 drop-shadow-sm">
+                    Selamat datang di portal resmi Himpunan Mahasiswa Ilmu Pendidikan Agama Islam. Mari wujudkan administrasi yang cepat, transparan, dan terintegrasi.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#administrasi" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 shadow-lg transition text-center">
+                        Coba Layanan Digital
+                    </a>
+                    <a href="#profil" class="bg-black border-2 border-black text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-900 transition text-center">
+                        Kenali Kami
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center relative">
+                <!-- Simulasi dashboard mockup -->
+                <div class="bg-white p-4 rounded-xl shadow-2xl transform rotate-2 hover:rotate-0 transition duration-300 w-full max-w-md border-t-8 border-yellow-400">
+                    <div class="flex items-center justify-between mb-4 border-b pb-2">
+                        <div class="text-gray-800 font-bold">Dashboard Pengurus</div>
+                        <div class="flex space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="h-8 bg-gray-100 rounded flex items-center px-3 text-sm text-gray-500">
+                            <i class="fas fa-envelope mr-2 text-sky-500"></i> Surat Masuk: 3 Pending
+                        </div>
+                        <div class="h-8 bg-gray-100 rounded flex items-center px-3 text-sm text-gray-500">
+                            <i class="fas fa-boxes mr-2 text-yellow-500"></i> Peminjaman Inventaris
+                        </div>
+                        <div class="h-8 bg-gray-100 rounded flex items-center px-3 text-sm text-gray-500">
+                            <i class="fas fa-file-signature mr-2 text-green-500"></i> Pengajuan Proposal
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="administrasi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Pusat Layanan Administrasi Digital</h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Kini mengurus keperluan himpunan jadi lebih mudah dan cepat. Semua terintegrasi dalam satu portal!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card Keuangan -->
+                <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Transparansi Keuangan</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-3">
+                        Akses laporan pemasukan, pengeluaran, dan saldo kas himpunan secara real-time yang diperbarui oleh Bendahara.
+                    </p>
+                    <button class="text-green-600 font-semibold hover:text-green-800 flex items-center">
+                        Lihat Laporan <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </button>
+                </div>
+
+                <!-- Card Kehadiran & Absensi -->
+                <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-sky-600 group-hover:text-white transition">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">E-Presensi Proker</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-3">
+                        Sistem pencatatan kehadiran panitia dan peserta proker secara digital menggunakan scan QR Code atau portal login.
+                    </p>
+                    <button class="text-sky-600 font-semibold hover:text-sky-800 flex items-center">
+                        Isi Daftar Hadir <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </button>
+                </div>
+
+                <!-- Card Monev -->
+                <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Rapor Kinerja (Monev)</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-3">
+                        Pantau nilai rekapitulasi, evaluasi, dan pencapaian (KPI) setiap anggota dan divisi dari tim Monitoring & Evaluasi.
+                    </p>
+                    <button class="text-purple-600 font-semibold hover:text-purple-800 flex items-center">
+                        Cek Rapor <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </button>
+                </div>
+
+                <!-- Card Data Bidang -->
+                <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Direktori Pengurus</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-3">
+                        Database lengkap struktur organisasi HIMA PAI, mulai dari BPH, Bidang, hingga Biro beserta program kerja masing-masing.
+                    </p>
+                    <button class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                        Jelajahi Struktur <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </button>
+                </div>
+
+                <!-- Card Jadwal Proker -->
+                <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-orange-500 group-hover:text-white transition">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Kalender Proker</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-3">
+                        Jadwal terintegrasi seluruh event, rapat, dan program kerja himpunan agar tidak terjadi bentrok agenda.
+                    </p>
+                    <button class="text-orange-600 font-semibold hover:text-orange-700 flex items-center">
+                        Lihat Kalender <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </button>
+                </div>
+
+                <!-- Card Aspirasi -->
+                <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Kotak Aspirasi</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-3">
+                        Sampaikan masukan, kritik, atau saran untuk HIMA PAI maupun prodi. Suaramu penting untuk kemajuan bersama.
+                    </p>
+                    <button class="text-red-600 font-semibold hover:text-red-800 flex items-center">
+                        Kirim Aspirasi <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-12 border-t-4 border-red-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <div class="flex items-center justify-center md:justify-start mb-4">
+                        <div class="w-8 h-8 bg-sky-500 rounded-full flex items-center justify-center text-white font-bold mr-3 border border-yellow-400 text-xs">
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-sky-400">HIMA PAI</h4>
+                    </div>
+                    <p class="text-gray-400 max-w-xs">Mengabdi dengan ikhlas, berinovasi tanpa batas untuk pendidikan Indonesia.</p>
+                </div>
+                <div class="flex flex-col items-center md:items-start">
+                    <h5 class="text-lg font-semibold mb-4 text-gray-200">Kontak Kami</h5>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-envelope mr-2"></i> sekretariat@himapai.ac.id</p>
+                    <p class="text-gray-400"><i class="fab fa-instagram mr-2"></i> @himapai_official</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2026 Divisi Kominfo HIMA PAI. Dibangun dengan kolaborasi dan semangat inovasi.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Login (Hidden by default) -->
+    <div id="loginModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-gray-900 bg-opacity-60 backdrop-blur-sm" onclick="toggleLoginModal()"></div>
+        
+        <!-- Modal Content -->
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 relative z-10 overflow-hidden transform transition-all">
+            <div class="bg-red-600 p-6 text-center border-b-4 border-yellow-400">
+                <img src="images (16).jpg" alt="Logo HIMA PAI" class="w-16 h-16 rounded-full mx-auto border-2 border-white mb-3 object-cover bg-white shadow-md">
+                <h3 class="text-2xl font-bold text-white">Portal Warga HIMA PAI</h3>
+                <p class="text-red-100 text-sm mt-1">Silakan masuk menggunakan NIM Anda</p>
+            </div>
+            <div class="p-8">
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="mb-5">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="nim">Nomor Induk Mahasiswa (NIM)</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-id-card text-gray-400"></i>
+                            </div>
+                            <input type="text" id="nim" class="w-full pl-10 pr-3 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder="Masukkan NIM (mis. 12020...)" required>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Kata Sandi</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-lock text-gray-400"></i>
+                            </div>
+                            <input type="password" id="password" class="w-full pl-10 pr-3 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder="••••••••" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-yellow-400 text-yellow-900 font-bold py-3 px-4 rounded-lg hover:bg-yellow-500 shadow-md transition duration-200 flex justify-center items-center">
+                        <span id="loginText">Masuk Sekarang</span>
+                        <i class="fas fa-sign-in-alt ml-2"></i>
+                    </button>
+                </form>
+                <div class="mt-6 text-center text-sm text-gray-500">
+                    Belum punya akun? <a href="#" class="text-sky-600 font-bold hover:underline">Hubungi Admin BPH</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Warga (Muncul setelah login) -->
+    <div id="dashboardSection" class="hidden fixed inset-0 bg-gray-50 z-[40] pt-20 overflow-y-auto min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-4">
+            <!-- Header Dashboard -->
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 mb-8 flex flex-col md:flex-row items-center justify-between border-t-4 border-sky-500">
+                <div class="flex items-center mb-4 md:mb-0 w-full md:w-auto justify-center md:justify-start">
+                    <div class="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 text-2xl mr-4 border-2 border-sky-200 overflow-hidden">
+                        <img src="images (16).jpg" alt="Logo HIMA PAI" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Selamat datang, Kawan! 👋</h2>
+                        <p class="text-gray-500">NIM: <span id="userNimDisplay" class="font-semibold text-sky-700">---</span> | Warga HIMA PAI</p>
+                    </div>
+                </div>
+                <button onclick="handleLogout()" class="border border-red-500 text-red-500 px-4 py-2 rounded-lg hover:bg-red-50 font-medium transition w-full md:w-auto">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Keluar
+                </button>
+            </div>
+
+            <!-- Kartu Info Pribadi -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-gradient-to-br from-sky-500 to-sky-700 rounded-2xl p-6 text-white shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-bold text-sky-100">Status Keaktifan</h3>
+                        <i class="fas fa-check-circle text-2xl text-yellow-400"></i>
+                    </div>
+                    <div class="text-3xl font-bold mb-1">AKTIF</div>
+                    <p class="text-sky-100 text-sm">Anggota Penuh Himpunan</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-bold text-gray-600">Kehadiran Proker</h3>
+                        <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center"><i class="fas fa-calendar-check"></i></div>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-1">85%</div>
+                    <p class="text-gray-500 text-sm">Telah mengikuti 6 dari 7 kegiatan</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-bold text-gray-600">Sertifikat Tersedia</h3>
+                        <div class="w-10 h-10 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center"><i class="fas fa-award"></i></div>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-1">3</div>
+                    <p class="text-gray-500 text-sm">Siap diunduh dalam bentuk PDF</p>
+                </div>
+            </div>
+
+            <!-- Menu Khusus Mahasiswa -->
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Layanan Pribadi Anda</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- QR Absensi -->
+                <button class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-sky-300 transition text-left flex items-center group">
+                    <div class="w-12 h-12 bg-sky-50 text-sky-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-sky-600 group-hover:text-white transition">
+                        <i class="fas fa-qrcode text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-gray-800">QR Absensi Ku</div>
+                        <div class="text-xs text-gray-500">Tampilkan untuk diabsen panitia</div>
+                    </div>
+                </button>
+                <!-- Unduh Sertifikat -->
+                <button class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-indigo-300 transition text-left flex items-center group">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fas fa-file-download text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-gray-800">Unduh Sertifikat</div>
+                        <div class="text-xs text-gray-500">Koleksi e-sertifikat kegiatan</div>
+                    </div>
+                </button>
+                <!-- Aspirasi Privat -->
+                <button class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-red-300 transition text-left flex items-center group">
+                    <div class="w-12 h-12 bg-red-50 text-red-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fas fa-bullhorn text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-gray-800">Aspirasi Privat</div>
+                        <div class="text-xs text-gray-500">Kirim masukan terverifikasi</div>
+                    </div>
+                </button>
+                <!-- Pinjam Barang (NEW) -->
+                <button class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-yellow-300 transition text-left flex items-center group">
+                    <div class="w-12 h-12 bg-yellow-50 text-yellow-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-yellow-500 group-hover:text-white transition">
+                        <i class="fas fa-boxes text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-gray-800">Pinjam Barang</div>
+                        <div class="text-xs text-gray-500">Inventaris proyektor, toa, dll</div>
+                    </div>
+                </button>
+                <!-- Pengajuan Surat (NEW) -->
+                <button class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-green-300 transition text-left flex items-center group">
+                    <div class="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fas fa-file-signature text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-gray-800">Pengajuan Surat</div>
+                        <div class="text-xs text-gray-500">Request surat aktif/delegasi</div>
+                    </div>
+                </button>
+                <!-- Pendaftaran Proker (NEW) -->
+                <button class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-purple-300 transition text-left flex items-center group">
+                    <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-purple-600 group-hover:text-white transition">
+                        <i class="fas fa-users-cog text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-gray-800">Daftar Kepanitiaan</div>
+                        <div class="text-xs text-gray-500">Open recruitment event HIMA</div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Setup environment
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'hima-pai-app';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+        
+        let auth, db, currentUser;
+
+        // Inisialisasi Database Firebase
+        if (firebaseConfig) {
+            try {
+                const app = initializeApp(firebaseConfig);
+                auth = getAuth(app);
+                db = getFirestore(app);
+                
+                const token = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+                if (token) {
+                    signInWithCustomToken(auth, token).then(res => { currentUser = res.user; }).catch(console.error);
+                } else {
+                    signInAnonymously(auth).then(res => { currentUser = res.user; }).catch(console.error);
+                }
+            } catch (error) {
+                console.error("Gagal menghubungkan ke database:", error);
+            }
+        }
+
+        // --- Logika Antarmuka (UI) ---
+        
+        window.toggleLoginModal = function() {
+            const modal = document.getElementById('loginModal');
+            modal.classList.toggle('hidden');
+        }
+
+        window.handleLogin = async function(event) {
+            event.preventDefault();
+            const nim = document.getElementById('nim').value;
+            const btnText = document.getElementById('loginText');
+            
+            btnText.innerText = "Mencocokkan Data...";
+            
+            // Jeda buatan untuk memberi kesan loading autentikasi
+            setTimeout(async () => {
+                // Proses penyimpanan log akun di database (Jika database aktif)
+                if (db && currentUser) {
+                    try {
+                        const userRef = doc(db, 'artifacts', appId, 'users', currentUser.uid, 'profile');
+                        await setDoc(userRef, { 
+                            nim: nim, 
+                            loginTime: new Date().toISOString() 
+                        }, { merge: true });
+                    } catch(e) { console.error(e); }
+                }
+
+                // Ubah Tampilan NIM di Dashboard
+                document.getElementById('userNimDisplay').innerText = nim;
+                
+                // Transisi ke Dashboard Warga
+                document.getElementById('loginModal').classList.add('hidden');
+                
+                // Menyembunyikan semua elemen landing page
+                document.getElementById('beranda').style.display = 'none';
+                document.getElementById('administrasi').style.display = 'none';
+                document.querySelector('footer').style.display = 'none';
+                
+                // Menampilkan Dashboard
+                document.getElementById('dashboardSection').classList.remove('hidden');
+                
+                btnText.innerText = "Masuk Sekarang";
+            }, 1200);
+        }
+
+        window.handleLogout = function() {
+            // Sembunyikan Dashboard
+            document.getElementById('dashboardSection').classList.add('hidden');
+            
+            // Munculkan kembali landing page
+            document.getElementById('beranda').style.display = 'flex';
+            document.getElementById('administrasi').style.display = 'block';
+            document.querySelector('footer').style.display = 'block';
+            
+            // Bersihkan form
+            document.getElementById('nim').value = '';
+            document.getElementById('password').value = '';
+        }
+    </script>
+    </body>
+    </html>
